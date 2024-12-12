@@ -1,0 +1,30 @@
+[class*=underlay] {
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+
+.underlay-photo {
+  animation: hue-rotate 20s infinite;
+  background: url('../imagenes/supermercadoo.jpg');
+  background-size: cover;
+  -webkit-filter: grayscale(50%);
+  z-index: -1;
+}
+.underlay-black {
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+
+@keyframes hue-rotate {
+  from {
+    -webkit-filter: grayscale(30%) hue-rotate(20deg);
+  }
+  to {
+    -webkit-filter: grayscale(30%) hue-rotate(1800deg);
+  }
+}
